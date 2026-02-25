@@ -81,6 +81,35 @@ npx hardhat run scripts/deploy.js --network localhost
 ```bash
 npm start
 ```
+## 📁 Project Structure
+
+```
+GeoLedger
+│
+├── backend
+│   ├── app.py
+│   └── requirements.txt
+│
+├── frontend
+│   ├── public
+│   │   └── index.html
+│   ├── src
+│   │   ├── Admin.js
+│   │   ├── Dashboard.js
+│   │   ├── Login.js
+│   │   ├── Register.js
+│   │   ├── Search.js
+│   │   ├── Sell.js
+│   │   ├── Track.js
+│   │   ├── Navbar.js
+│   │   ├── Sidebar.js
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── package.json
+│   └── package-lock.json
+│
+└── backend API handles land records & blockchain interaction
+```
 
 ---
 
