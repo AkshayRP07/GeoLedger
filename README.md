@@ -1,113 +1,109 @@
-🌍 GeoLedger
+# 🌍 GeoLedger
 
-GeoLedger is a blockchain-powered land registry system designed to ensure secure, transparent, and tamper-proof land ownership management.
+GeoLedger is a **blockchain-powered land registry system** designed to ensure secure, transparent, and tamper-proof land ownership management.
 
 It eliminates fraud, enables public verification, and introduces nominee-based inheritance for seamless land transfer.
 
-🚀 Features
+---
 
-✔ Secure land ownership registration using blockchain
-✔ Wallet-based admin approval system
-✔ Public land verification & search
-✔ Nominee inheritance transfer system
-✔ Tamper-proof land records
-✔ Transparent ownership history
-✔ Fraud prevention using smart contracts
+## 🚀 Features
 
-🧱 System Architecture
+- Secure land ownership registration using blockchain  
+- Wallet-based admin approval system  
+- Public land verification & search  
+- Nominee inheritance transfer system  
+- Tamper-proof land records  
+- Transparent ownership history  
+- Fraud prevention using smart contracts  
 
-Frontend: React.js
+---
 
-Blockchain: Ethereum / Hardhat
+## 🧱 System Architecture
 
-Smart Contracts: Solidity
+**Frontend:** React.js  
+**Blockchain:** Ethereum / Hardhat  
+**Smart Contracts:** Solidity  
+**Wallet Integration:** MetaMask  
+**Backend (optional):** Node.js / Express  
+**Storage:** Blockchain ledger  
 
-Wallet Integration: MetaMask
+---
 
-Backend (optional): Node.js / Express
+## 👤 User Roles
 
-Storage: Blockchain ledger
+### 🔹 Admin
+- Approves land registration requests  
+- Verifies ownership data  
 
-👤 User Roles
-🔹 Admin
+### 🔹 Citizen/User
+- Submit land registration  
+- Add nominee for inheritance  
+- Verify land ownership  
+- Search property details  
 
-Approves land registration requests
+---
 
-Verifies ownership data
-
-🔹 Citizen/User
-
-Submit land registration
-
-Add nominee for inheritance
-
-Verify land ownership
-
-Search property details
-
-🔐 Unique Innovation
+## 🔐 Unique Innovation
 
 GeoLedger introduces:
 
-✅ Nominee-based blockchain inheritance transfer
-✅ Public verification without compromising ownership security
-✅ Admin wallet-based authorization
-✅ Transparent ownership traceability
+- Nominee-based blockchain inheritance transfer  
+- Public verification without compromising ownership security  
+- Admin wallet-based authorization  
+- Transparent ownership traceability  
 
-⚙️ Installation & Setup
-1️⃣ Clone Repository
-git clone https://github.com/yourusername/GeoLedger.git
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/YOUR-USERNAME/GeoLedger.git
 cd GeoLedger
-2️⃣ Install Dependencies
+```
+
+### 2️⃣ Install Dependencies
+```bash
 npm install
-3️⃣ Start Local Blockchain
+```
+
+### 3️⃣ Start Local Blockchain
+```bash
 npx hardhat node
-4️⃣ Deploy Smart Contracts
+```
+
+### 4️⃣ Deploy Smart Contracts
+```bash
 npx hardhat run scripts/deploy.js --network localhost
-5️⃣ Run Frontend
+```
+
+### 5️⃣ Run Frontend
+```bash
 npm start
-🛡 Why GeoLedger?
+```
+
+---
+
+## 🛡 Why GeoLedger?
 
 Traditional land systems are vulnerable to fraud, manipulation, and document tampering. GeoLedger uses blockchain technology to create a secure and transparent land ownership ecosystem.
 
-📌 Future Enhancements
+---
 
-GIS map integration
+## 📌 Future Enhancements
 
-Government registry integration
+- GIS map integration  
+- Government registry integration  
+- Mobile app support  
+- IPFS document storage  
+- Biometric verification  
 
-Mobile app support
+---
 
-IPFS document storage
+## 👨‍💻 Author
+**Akshay Pokale**
 
-Biometric verification
+---
 
-👨‍💻 Author
-
-Akshay Pokale
-
-📜 License
-
+## 📜 License
 MIT License
-
-✅ 5️⃣ .gitignore
-
-If not present, create one:
-
-node_modules/
-.env
-artifacts/
-cache/
-dist/
-build/
-✅ 6️⃣ Suggested Folder Structure
-GeoLedger/
- ├── blockchain/
- │   ├── contracts/
- │   ├── scripts/
- │   └── hardhat.config.js
- ├── frontend/
- │   ├── src/
- │   └── public/
- ├── README.md
- └── package.json
