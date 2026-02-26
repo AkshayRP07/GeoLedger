@@ -128,6 +128,24 @@ Traditional land systems are vulnerable to fraud, manipulation, and document tam
 - Biometric verification  
 
 ---
+## Images
+# Admin Panel
+
+<img width="1919" height="1027" alt="image" src="https://github.com/user-attachments/assets/53b6c7bc-2ccb-41f1-b6da-6c0e9f7d1494" />
+<img width="1919" height="976" alt="image" src="https://github.com/user-attachments/assets/46caa346-3417-452b-8bd4-cb286e121312" />
+<img width="1920" height="483" alt="image" src="https://github.com/user-attachments/assets/a97ce16e-784b-4f9b-81f6-12ddccc1d6aa" />
+
+# User Panel 
+<img width="1913" height="1030" alt="image" src="https://github.com/user-attachments/assets/38438464-7a07-4153-8ff8-38b7cee7e580" />
+<img width="1889" height="876" alt="image" src="https://github.com/user-attachments/assets/b28300d8-5057-4246-9d39-706b7b6a30b6" />
+<img width="742" height="464" alt="image" src="https://github.com/user-attachments/assets/f09f69cd-0725-4555-b191-7f787081e368" />    <img width="842" height="363" alt="image" src="https://github.com/user-attachments/assets/eb8e3a16-1a81-4e6e-934c-c97b42580fce" />
+
+
+
+
+
+
+
 
 ## 👨‍💻 Author
 **Akshay Pokale**
