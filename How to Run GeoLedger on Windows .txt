@@ -1,0 +1,110 @@
+GeoLedger — Windows Setup Guide
+
+------------What You Need to Install First-----------
+Install these in order:
+1. Node.js — https://nodejs.org (download LTS version, run installer)
+2. Python 3.11+ — https://python.org/downloads (during install, tick ✅ "Add Python to PATH")
+3. Git — https://git-scm.com/download/win (just click Next through installer)
+4. Ganache — open Command Prompt and run:
+npm install -g ganache
+5. Chromium or Google Chrome — https://www.google.com/chrome (must be installed for Satbara fetch)
+
+----------Step 1 — Get the Project------------
+Copy the project folder to your PC, or if on GitHub:
+git clone <repo-url>
+cd GeoLedger System
+
+--------Step 2 — Backend Setup----------
+Open Command Prompt inside the project folder:
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+
+----------Step 3 — Frontend Setup--------------
+Open a new Command Prompt tab:
+cd frontend
+npm install
+
+-----------Step 4 — Every Time You Run the Project----------------
+You need 3 separate Command Prompt windows open at the same time.
+Window 1 — Start Ganache:
+ganache
+Keep this running. Copy one of the account addresses shown — you'll need it.
+Window 2 — Deploy Contract + Start Flask:
+Only run deploy once per Ganache session (every time you restart Ganache, run deploy again):
+cd backend
+venv\Scripts\activate
+python deploy_contract.py
+You should see: Contract deployed at: 0x...
+Then start Flask:
+python app.py
+Keep this running.
+Window 3 — Start React Frontend:
+cd frontend
+npm start
+Browser opens at http://localhost:3000 automatically.
+
+----------Step 5 — Login-----------
+RoleUsernamePasswordAdminadminadmin123Useruser1user123
+
+How to Use — Quick Flow
+
+Login as user1
+Go to Register → fetch Satbara (optional) → fill land details → submit
+Login as admin → go to Registrations → click 🔍 Review → Approve
+Login as user1 → go to Properties → your land appears
+Use Land Map tab to visually locate the land
+
+
+----------------Clearing All Data and Starting Fresh-----------------
+Clear all registered properties, registrations and sales:
+Open backend/data.json in Notepad and replace everything with:json
+
+{
+  "lands": [],
+  "registrations": [],
+  "sales": []
+}
+
+Save the file.
+Clear all users (reset to default admin + user1):
+
+Open backend/users.json and replace everything with:
+
+json[
+  {
+    "username": "admin",
+    "password": "admin123",
+    "role": "admin"
+  },
+  {
+    "username": "user1",
+    "password": "user123",
+    "role": "user"
+  }
+]
+
+Save the file.
+
+Clear downloaded Satbara PDFs:
+Delete all files inside backend/downloads/ folder. You can leave the folder itself empty.
+Reset Blockchain (fresh Ganache):
+Stop Ganache with Ctrl+C, restart it:
+ganache
+Then redeploy the contract:
+cd backend
+venv\Scripts\activate
+python deploy_contract.py
+
+⚠️ Every time Ganache restarts, you MUST run deploy_contract.py again. The old contract address no longer exists on the reset blockchain.
+
+Full clean restart checklist:
+
+ Reset data.json to empty structure above
+ Optionally reset users.json
+ Delete files in backend/downloads/
+ Stop and restart Ganache
+ Run python deploy_contract.py
+ Run python app.py
+ Run npm start
