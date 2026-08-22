@@ -1,0 +1,65 @@
+{
+  "lands": [
+    {
+      "id": 1,
+      "surveyNumber": "87/2",
+      "village": "Khed",
+      "taluka": "Haveli",
+      "district": "pune",
+      "owner": "Yash Patil",
+      "ownerAddress": "0x89079f8Ff1F7Ed2b9f1Dd1A186ABe4C1298CA81C",
+      "txHash": "f49fde9fcc5afb4adde8db696760801581d88907f7b786172911afe91aa95fb2",
+      "pdf_url": "/api/downloads/3104100001394250.pdf",
+      "history": [
+        {
+          "owner": "user1",
+          "date": "2026-06-05 16:22:53.035296"
+        },
+        {
+          "owner": "user1",
+          "date": "2026-06-05 16:24:49.944772"
+        }
+      ],
+      "area": "4 Acre"
+    }
+  ],
+  "registrations": [
+    {
+      "id": 1,
+      "surveyNumber": "87/2",
+      "village": "Khed",
+      "taluka": "Haveli",
+      "district": "pune",
+      "owner": "user1",
+      "ownerAddress": "0x278f4C7Ccd677dD043CF3dE5fCDB248c73749f4E",
+      "nominees": [
+        "Aditya Chavan"
+      ],
+      "pdf_url": "/api/downloads/3104100001394250.pdf",
+      "status": "Approved",
+      "action": "Register",
+      "txHash": "2d04bb2d707bfd171dafa545fd83ed9284d6cda699c685259b534e8cdb236e94",
+      "date": "2026-06-05 16:22:36.867594"
+    }
+  ],
+  "sales": [
+    {
+      "id": 1,
+      "landId": "1",
+      "currentOwner": "user1",
+      "buyer": "Yash Patil",
+      "buyerAddress": "0x89079f8Ff1F7Ed2b9f1Dd1A186ABe4C1298CA81C",
+      "amount": "500000",
+      "area": "4 Acre",
+      "nominees": [
+        "Ravi Patil"
+      ],
+      "pdf_url": "/api/downloads/3104100001394250.pdf",
+      "status": "Approved",
+      "action": "Sell",
+      "txHash": "f49fde9fcc5afb4adde8db696760801581d88907f7b786172911afe91aa95fb2",
+      "date": "2026-06-05 16:24:30.545395",
+      "transferType": "Full"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+flask
+flask-cors
+web3
+selenium
+webdriver-manager
+py-solc-x
+gunicorn
