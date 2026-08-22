@@ -101,6 +101,13 @@ GeoLedger-System/
 ├── contracts/         # LandRegistry.sol smart contract
 └── render.yaml        # Deployment config
 ```
+# Outcomes
+<img width="929" height="531" alt="image" src="https://github.com/user-attachments/assets/fcd28082-6b05-429d-bfe5-993200208db5" /> 
+<img width="834" height="455" alt="image" src="https://github.com/user-attachments/assets/1ab21602-dab8-414a-b127-a98684fae1db" />
+<img width="890" height="448" alt="image" src="https://github.com/user-attachments/assets/034701e9-6e6b-4f9e-b12d-4de5846ad9ee" />
+<img width="943" height="322" alt="image" src="https://github.com/user-attachments/assets/500eb303-2f68-45fd-a7a1-8a2aa236d687" />
+
+
 
 ## 📜 License
 
