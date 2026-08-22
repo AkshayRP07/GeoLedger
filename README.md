@@ -1,156 +1,108 @@
-# 🌍 GeoLedger
+# 🏡 GeoLedger — Blockchain-Based Land Registry System
 
-GeoLedger is a **blockchain-powered land registry system** designed to ensure secure, transparent, and tamper-proof land ownership management.
+![Status](https://img.shields.io/badge/status-active-success)
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor black)
+![Solidity](https://img.shields.io/badge/Solidity-0.8-363636?logo=solidity&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-backend-000000?logo=flask&logoColor=white)
 
-It eliminates fraud, enables public verification, and introduces nominee-based inheritance for seamless land transfer.
+> A full-stack land registry platform that puts land ownership records on a blockchain — tamper-proof, transparent, and verifiable — with an admin approval workflow and live land-parcel mapping.
 
----
+## 🎯 Problem → Solution
 
-## 🚀 Features
+Land records in India are often paper-based, easy to forge, and hard to verify across departments. **GeoLedger** digitizes the registration process and anchors every ownership record and transfer on an immutable smart contract, so ownership history can never be silently altered.
 
-- Secure land ownership registration using blockchain  
-- Wallet-based admin approval system  
-- Public land verification & search  
-- Nominee inheritance transfer system  
-- Tamper-proof land records  
-- Transparent ownership history  
-- Fraud prevention using smart contracts  
+## ✨ Features
 
----
+- 🔐 **Role-based access** — separate Admin and User dashboards
+- 📝 **Land registration workflow** — users submit land details, admins review & approve
+- ⛓️ **On-chain ownership records** — registrations and transfers written to a Solidity smart contract
+- 🔄 **Partial & full ownership transfer** — split and transfer land parcels with full transaction history
+- 📍 **Interactive land map** — visualize registered parcels using Leaflet
+- 📄 **Satbara (7/12 extract) auto-fetch** — Selenium-based fetch of official land records
+- 📊 **Dashboard analytics** — Chart.js visualizations of registrations & transactions
 
-## 🧱 System Architecture
+## 🛠️ Tech Stack
 
-**Frontend:** React.js  
-**Blockchain:** Ethereum / Hardhat  
-**Smart Contracts:** Solidity  
-**Wallet Integration:** MetaMask  
-**Backend (optional):** Node.js / Express  
-**Storage:** Blockchain ledger  
+| Layer | Technology |
+|---|---|
+| Frontend | React 19, React Router, Chart.js, Leaflet |
+| Backend | Flask, Flask-CORS |
+| Blockchain | Solidity, Web3.py, Ganache (local chain) |
+| Automation | Selenium, WebDriver Manager |
+| Deployment | Render (`render.yaml` included) |
 
----
+## 🏗️ Architecture
 
-## 👤 User Roles
-
-### 🔹 Admin
-- Approves land registration requests  
-- Verifies ownership data  
-
-### 🔹 Citizen/User
-- Submit land registration  
-- Add nominee for inheritance  
-- Verify land ownership  
-- Search property details  
-
----
-
-## 🔐 Unique Innovation
-
-GeoLedger introduces:
-
-- Nominee-based blockchain inheritance transfer  
-- Public verification without compromising ownership security  
-- Admin wallet-based authorization  
-- Transparent ownership traceability  
-
----
-
-## ⚙️ Installation & Setup
-
-### 1️⃣ Clone Repository
-```bash
-git clone https://github.com/YOUR-USERNAME/GeoLedger.git
-cd GeoLedger
+```
+Frontend (React) ──HTTP──▶ Backend (Flask) ──Web3──▶ Smart Contract (Ganache)
+                                  │
+                                  └── Selenium ──▶ Satbara record fetch
 ```
 
-### 2️⃣ Install Dependencies
+## 📸 Screenshots
+
+### Admin Panel
+<!-- Drag & drop admin screenshots here in GitHub's editor -->
+
+### User Panel
+<!-- Drag & drop user-panel screenshots here in GitHub's editor -->
+
+## 🚀 Getting Started
+
+**Prerequisites:** Node.js, Python 3.11+, Git, [Ganache](https://www.npmjs.com/package/ganache), Chrome/Chromium
+
 ```bash
+# 1. Clone
+git clone https://github.com/AkshayRP07/GeoLedger-System.git
+cd GeoLedger-System
+
+# 2. Backend setup
+cd backend
+python -m venv venv
+venv\Scripts\activate        # Windows
+pip install -r requirements.txt
+
+# 3. Frontend setup
+cd ../frontend
 npm install
 ```
 
-### 3️⃣ Start Local Blockchain
-```bash
-npx hardhat node
-```
+**Every run (3 terminals):**
 
-### 4️⃣ Deploy Smart Contracts
 ```bash
-npx hardhat run scripts/deploy.js --network localhost
-```
+# Terminal 1 — local blockchain
+ganache
 
-### 5️⃣ Run Frontend
-```bash
+# Terminal 2 — deploy contract + start API
+cd backend && venv\Scripts\activate
+python deploy_contract.py     # only after each fresh Ganache start
+python app.py
+
+# Terminal 3 — frontend
+cd frontend
 npm start
 ```
-## 📁 Project Structure
+
+App opens at `http://localhost:3000`.
+
+**Demo credentials:**
+
+| Role | Username | Password |
+|---|---|---|
+| Admin | admin | admin123 |
+| User | user1 | user123 |
+
+## 📂 Project Structure
 
 ```
-GeoLedger
-│
-├── backend
-│   ├── app.py
-│   └── requirements.txt
-│
-├── frontend
-│   ├── public
-│   │   └── index.html
-│   ├── src
-│   │   ├── Admin.js
-│   │   ├── Dashboard.js
-│   │   ├── Login.js
-│   │   ├── Register.js
-│   │   ├── Search.js
-│   │   ├── Sell.js
-│   │   ├── Track.js
-│   │   ├── Navbar.js
-│   │   ├── Sidebar.js
-│   │   ├── App.js
-│   │   └── index.js
-│   ├── package.json
-│   └── package-lock.json
-│
-└── backend API handles land records & blockchain interaction
+GeoLedger-System/
+├── frontend/          # React app (Admin/User dashboards, map view)
+├── backend/           # Flask API + Web3 integration
+├── contracts/         # LandRegistry.sol smart contract
+└── render.yaml        # Deployment config
 ```
-
----
-
-## 🛡 Why GeoLedger?
-
-Traditional land systems are vulnerable to fraud, manipulation, and document tampering. GeoLedger uses blockchain technology to create a secure and transparent land ownership ecosystem.
-
----
-
-## 📌 Future Enhancements
-
-- GIS map integration  
-- Government registry integration  
-- Mobile app support  
-- IPFS document storage  
-- Biometric verification  
-
----
-## Images
-# Admin Panel
-
-<img width="1919" height="1027" alt="image" src="https://github.com/user-attachments/assets/53b6c7bc-2ccb-41f1-b6da-6c0e9f7d1494" />
-<img width="1919" height="976" alt="image" src="https://github.com/user-attachments/assets/46caa346-3417-452b-8bd4-cb286e121312" />
-<img width="1920" height="483" alt="image" src="https://github.com/user-attachments/assets/a97ce16e-784b-4f9b-81f6-12ddccc1d6aa" />
-
-# User Panel 
-<img width="1913" height="1030" alt="image" src="https://github.com/user-attachments/assets/38438464-7a07-4153-8ff8-38b7cee7e580" />
-<img width="1889" height="876" alt="image" src="https://github.com/user-attachments/assets/b28300d8-5057-4246-9d39-706b7b6a30b6" />
-<img width="742" height="464" alt="image" src="https://github.com/user-attachments/assets/f09f69cd-0725-4555-b191-7f787081e368" />    <img width="842" height="363" alt="image" src="https://github.com/user-attachments/assets/eb8e3a16-1a81-4e6e-934c-c97b42580fce" />
-
-
-
-
-
-
-
-
-## 👨‍💻 Author
-**Akshay Pokale**
-
----
 
 ## 📜 License
-MIT License
+
+MIT
