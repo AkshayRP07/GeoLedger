@@ -2,7 +2,6 @@
 
 ![Status](https://img.shields.io/badge/status-active-success)
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
-![React]_(https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor black)
 ![Solidity](https://img.shields.io/badge/Solidity-0.8-363636?logo=solidity&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-backend-000000?logo=flask&logoColor=white)
 
